@@ -272,12 +272,13 @@ elif st.session_state.page == "result":
     with col:
         # 산타 선물 받기
         if st.button("🎁 산타가 주는 선물 받기"):
-            st.markdown(f'<a href="{result["link"]}" target="_blank">🎁 산타가 주는 선물 받기</a>', unsafe_allow_html=True)
+           st.markdown(f'[여기를 클릭하면 선물을 받을 수 있습니다!]({result["link"]})', unsafe_allow_html=True)
         # 다시 하기
         if st.button("🔄 다시 하기"):
             st.session_state.stage = 0
             st.session_state.score = 0
             st.session_state.page = "main"
             st.rerun()
+
 
 
